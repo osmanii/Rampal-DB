@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:layout_toLeftOf="@+id/radioGroup2"
+                    android:text="24. Died any member in last six months?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/diedDiseaseET"
+                    android:layout_alignBottom="@+id/diedDiseaseET"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:gravity="right"
+                    android:text="if yes:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/diedDiseaseET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginRight="8.0dip"
+                    android:layout_marginTop="22.0dip"
+                    android:ems="10"
+                    android:gravity="center_horizontal"
+                    android:hint="Reason for death?" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignRight="@+id/textView1"
+                    android:layout_below="@+id/diedDiseaseET"
+                    android:layout_marginTop="25.0dip"
+                    android:text="25. Died any member for cancer disease?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView3"
+                    android:layout_alignRight="@+id/diedDiseaseET">
+
+                    <RadioButton
+                        android:id="@+id/cancerYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/cancerNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="No" />
+                </RadioGroup>
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignRight="@+id/diedDiseaseET"
+                    android:layout_alignTop="@+id/textView1">
+
+                    <RadioButton
+                        android:id="@+id/diedYes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="Yes" />
+
+                    <RadioButton
+                        android:id="@+id/diedNo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:onClick="onRadioButtonClicked"
+                        android:text="No" />
+                </RadioGroup>
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginTop="18.0dip"
+                    android:text="if yes:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/cancerET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView4"
+                    android:layout_alignBottom="@+id/textView4"
+                    android:layout_alignLeft="@+id/diedDiseaseET"
+                    android:layout_alignRight="@+id/radioGroup2"
+                    android:ems="10"
+                    android:hint="Type of Cancer" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/E:/AndroProjectRepo/StudioDirectory/HouseholdSurvey/app/src/main/res/layout/pp_activity_fifth_page.xml -->

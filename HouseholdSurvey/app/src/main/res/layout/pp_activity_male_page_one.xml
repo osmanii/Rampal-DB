@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textView100"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="Conditions present in last year:"
+                    android:textAppearance="?android:textAppearanceLarge" />
+                <TextView
+                    android:id="@+id/textViewHyperTension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView100"
+                    android:layout_marginTop="5dip"
+                    android:text="1. Hypertension:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchHyperTension"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewHyperTension"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewDiabetes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewHyperTension"
+                    android:layout_marginTop="14.0dip"
+                    android:text="2. Diabetes:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchDiabetes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewDiabetes"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewIHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewDiabetes"
+                    android:layout_marginTop="14.0dip"
+                    android:maxEms="10"
+                    android:maxLines="2"
+                    android:text="3. IHD: chest pain on exertion:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchIHD"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewIHD"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewIHD"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewCancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewIHD"
+                    android:layout_marginTop="14.0dip"
+                    android:text="4. Cancer:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchCancer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewCancer"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewCancerType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textViewCancer"
+                    android:layout_alignRight="@+id/textViewCancer"
+                    android:layout_below="@+id/switchCancer"
+                    android:layout_marginTop="12.0dip"
+                    android:gravity="center_horizontal"
+                    android:text="if yes:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edittextCancerType"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewCancerType"
+                    android:layout_alignBottom="@+id/textViewCancerType"
+                    android:layout_alignLeft="@+id/switchCancer"
+                    android:layout_alignRight="@+id/switchCancer"
+                    android:ems="10"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textViewAsthma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewCancerType"
+                    android:layout_marginTop="14.0dip"
+                    android:text="5. Asthma:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchAsthma"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewAsthma"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewOtherMajor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewAsthma"
+                    android:layout_marginTop="14.0dip"
+                    android:maxEms="8"
+                    android:maxLines="2"
+                    android:text="6. Other active major health condition:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchOtherMajor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewOtherMajor"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewOtherMajor"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewOtherMajorEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textViewOtherMajor"
+                    android:layout_alignRight="@+id/textViewOtherMajor"
+                    android:layout_below="@+id/textViewOtherMajor"
+                    android:layout_marginTop="12.0dip"
+                    android:gravity="center_horizontal"
+                    android:text=" If yes, name of condition:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edittextOtherMajorEt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewOtherMajorEt"
+                    android:layout_alignBottom="@+id/textViewOtherMajorEt"
+                    android:layout_alignLeft="@+id/switchOtherMajor"
+                    android:layout_alignRight="@+id/switchOtherMajor"
+                    android:ems="10"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textViewChronicPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewOtherMajorEt"
+                    android:layout_marginTop="14.0dip"
+                    android:maxEms="8"
+                    android:maxLines="2"
+                    android:text="7. Chronic pain:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchChronicPain"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewChronicPain"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewChronicPain"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewChronicPainMajorSite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewChronicPain"
+                    android:layout_marginTop="12.0dip"
+                    android:gravity="center_horizontal"
+                    android:text=" If yes, major site of pain:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edittextChronicPainMajorSite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewChronicPainMajorSite"
+                    android:layout_alignBottom="@+id/textViewChronicPainMajorSite"
+                    android:layout_alignLeft="@+id/switchChronicPain"
+                    android:layout_alignRight="@+id/switchChronicPain"
+                    android:ems="10"
+                    android:inputType="text" />
+
+                <TextView
+                    android:id="@+id/textViewChronicPainCurrentPainLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewChronicPainMajorSite"
+                    android:layout_marginTop="12.0dip"
+                    android:gravity="center_horizontal"
+                    android:text=" If yes, Current pain level:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edittextChronicPainCurrentPainLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewChronicPainCurrentPainLevel"
+                    android:layout_alignBottom="@+id/textViewChronicPainCurrentPainLevel"
+                    android:layout_alignLeft="@+id/switchChronicPain"
+                    android:layout_alignRight="@+id/switchChronicPain"
+                    android:ems="10"
+                    android:inputType="phone" />
+
+                <TextView
+                    android:id="@+id/textViewChronicPainWorstPainLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewChronicPainCurrentPainLevel"
+                    android:layout_marginTop="12.0dip"
+                    android:gravity="center_horizontal"
+                    android:text=" If yes, Worst pain level:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/edittextChronicPainWorstPainLevel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textViewChronicPainWorstPainLevel"
+                    android:layout_alignBottom="@+id/textViewChronicPainWorstPainLevel"
+                    android:layout_alignLeft="@+id/switchChronicPain"
+                    android:layout_alignRight="@+id/switchChronicPain"
+                    android:ems="10"
+                    android:inputType="phone" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

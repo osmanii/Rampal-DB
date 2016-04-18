@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:layout_marginTop="15.0dip"
+                    android:text="1. Name of Head of the family"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/nameHeadET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView1"
+                    android:ems="10"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nameHeadET"
+                    android:layout_alignRight="@+id/nameHeadET"
+                    android:layout_below="@+id/nameHeadET"
+                    android:layout_marginTop="19.0dip"
+                    android:text="2. Name"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/nameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignRight="@+id/nameHeadET"
+                    android:layout_below="@+id/textView2"
+                    android:ems="10"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nameET"
+                    android:layout_alignRight="@+id/nameET"
+                    android:layout_below="@+id/nameET"
+                    android:layout_marginTop="20.0dip"
+                    android:text="3. Mother's Name"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_below="@+id/textView3" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroupDied"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginLeft="17.0dip"
+                    android:layout_toRightOf="@+id/textView2" />
+
+                <EditText
+                    android:id="@+id/motherNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/radioGroup1"
+                    android:layout_alignRight="@+id/textView3"
+                    android:layout_below="@+id/radioGroup1"
+                    android:ems="10"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/motherNameET"
+                    android:layout_alignRight="@+id/fatherNameET"
+                    android:layout_below="@+id/motherNameET"
+                    android:layout_marginTop="11.0dip"
+                    android:text="4. Father's Name"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_below="@+id/fatherNameET"
+                    android:layout_marginTop="27.0dip"
+                    android:text="5. Date of birth:      "
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/ageET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/dateOfBirthET"
+                    android:layout_below="@+id/textView6"
+                    android:layout_toLeftOf="@+id/radioGroupDied"
+                    android:ems="10"
+                    android:inputType="number"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/ageET"
+                    android:layout_alignBottom="@+id/ageET"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignRight="@+id/textView6"
+                    android:gravity="center_horizontal"
+                    android:text=" Age:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/fatherNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/motherNameET"
+                    android:layout_alignRight="@+id/motherNameET"
+                    android:layout_below="@+id/textView4"
+                    android:ems="10"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/dateOfBirthET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_toLeftOf="@+id/radioGroupDied"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_below="@+id/ageET"
+                    android:layout_marginTop="7.0dip"
+                    android:layout_toLeftOf="@+id/radioGroupDied"
+                    android:gravity="left"
+                    android:text="6. Voter ID/ Birth registration no:"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/voterIdET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView5"
+                    android:layout_alignRight="@+id/textView5"
+                    android:layout_below="@+id/textView5"
+                    android:layout_marginTop="7.0dip"
+                    android:ems="10" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

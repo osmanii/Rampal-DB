@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/solid_bg">
+
+    <ImageView
+        android:id="@+id/imageviewLogo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30.0dip"
+        android:src="@drawable/logo" />
+
+    <LinearLayout
+        android:id="@+id/inputFieldLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageviewLogo"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20.0dip"
+        android:layout_marginRight="20.0dip"
+        android:layout_marginTop="30.0dip"
+        android:background="@drawable/input_field_bg"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="25.0dip"
+            android:ems="20"
+            android:hint="Username"
+            android:text=""
+            android:textSize="16.0sp" />
+
+        <EditText
+            android:id="@+id/password"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="15.0dip"
+            android:ems="20"
+            android:hint="Password"
+            android:inputType="textPassword"
+            android:text=""
+            android:textSize="16.0sp" />
+
+        <Button
+            android:id="@+id/login"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="5.0dip"
+            android:layout_marginLeft="5.0dip"
+            android:layout_marginRight="5.0dip"
+            android:layout_marginTop="40.0dip"
+            android:background="@drawable/apptheme_btn_default_holo_light"
+            android:text="Login"
+            android:textColor="@android:color/white" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/textviewSubtitleOne"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/inputFieldLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15.0dip"
+        android:text="Rampal Health Database Program"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/apptheme_color"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/textviewSubtitleTwo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textviewSubtitleOne"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10.0dip"
+        android:text="Amader Gram Cancer Care &amp; Research Center, 2014"
+        android:textAppearance="?android:textAppearanceSmall"
+        android:textColor="@color/apptheme_color"
+        android:textStyle="bold" />
+</RelativeLayout>

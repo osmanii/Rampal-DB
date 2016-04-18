@@ -1,0 +1,414 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="5.0dip"
+        android:paddingRight="5.0dip"
+        android:paddingTop="5.0dip">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content">
+
+                <Button
+                    android:id="@+id/getGPS"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:text="Get GPS Location"
+                    android:textColor="@android:color/white"
+                    android:textSize="14.0sp" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/getGPS"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/getGPS"
+                    android:gravity="left|center"
+                    android:text="1. GPS Location"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/latitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_below="@+id/getGPS"
+                    android:layout_marginTop="5.0dip"
+                    android:text="Latitude: ..."
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <TextView
+                    android:id="@+id/longitude"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/latitude"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="5.0dip"
+                    android:text="Longitude: ..."
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <LinearLayout
+                    android:id="@+id/layoutElectricity"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/longitude"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textView3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="fill_parent"
+                        android:gravity="center_vertical"
+                        android:text="2. Electricity in House: "
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <RadioGroup
+                        android:id="@+id/radioGroup1"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:baselineAligned="true"
+                        android:gravity="right"
+                        android:orientation="horizontal">
+
+                        <RadioButton
+                            android:id="@+id/electricityYes"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="Yes" />
+
+                        <RadioButton
+                            android:id="@+id/electricityNo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:onClick="onRadioButtonClicked"
+                            android:text="No" />
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutSaferWater"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutElectricity"
+                    android:orientation="horizontal"
+                    android:visibility="gone">
+
+                    <TextView
+                        android:id="@+id/textviewSaferWater"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="3. Do you do anything to make the water safer?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/spinnerSaferWater"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:entries="@array/saferWaterSources" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/layoutReligion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutSaferWater"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/textviewReligion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="50.0dip"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="3. Religion of household members?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Spinner
+                        android:id="@+id/spinnerReligion"
+                        android:layout_width="fill_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:entries="@array/religionNames" />
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/textviewliveStock"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layoutReligion"
+                    android:maxLines="2"
+                    android:text="4. Any livestock, herds, farm animal or poultry?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchLiveStock"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textviewliveStockAvailable"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignTop="@+id/textviewliveStockAvailable"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textviewliveStockAvailable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textviewliveStock"
+                    android:layout_toRightOf="@+id/switchLiveStock"
+                    android:paddingLeft="5.0dip"
+                    android:text="If yes:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <RelativeLayout
+                    android:id="@+id/layoutLiveStockTypes"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textviewliveStockAvailable"
+                    android:layout_marginTop="5.0dip"
+                    android:paddingRight="10.0dip">
+
+                    <TextView
+                        android:id="@+id/textViewBuffaloes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Buffaloes:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchBuffaloes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewBuffaloes"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewCows"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewBuffaloes"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Cows:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchCows"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewCows"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewGoats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewCows"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Goats:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchGoats"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewGoats"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewSheeps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewGoats"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Sheep:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchSheeps"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewSheeps"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewChickens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewSheeps"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Chickens :"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchChickens"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewChickens"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewDucks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewChickens"
+                        android:layout_marginLeft="10.0dip"
+                        android:layout_marginTop="2.0dip"
+                        android:text="Ducks:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchDucks"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewDucks"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewHandWashPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewDucks"
+                        android:layout_marginTop="5.0dip"
+                        android:text="5. Hand wash place seen?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchHandWashPlace"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewHandWashPlace"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewHandWashWaterAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewHandWashPlace"
+                        android:layout_marginTop="5.0dip"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="6. Water available for hand washing?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchHandWashWaterAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewHandWashWaterAvailable"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewHandWashCleansingAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/textViewHandWashWaterAvailable"
+                        android:layout_marginTop="5.0dip"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="7. Any cleansing available for hand washing?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchHandWashCleansingAvailable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewHandWashCleansingAvailable"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

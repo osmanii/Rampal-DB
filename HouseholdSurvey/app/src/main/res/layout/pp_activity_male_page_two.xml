@@ -1,0 +1,321 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Submit"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/smokingLayout">
+
+                    <!--smoking start -->
+                    <TextView
+                        android:id="@+id/textViewSmokingNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/layout_pressure_2"
+                        android:layout_marginTop="2dip"
+                        android:text="13. Smoking Now?"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchSmokingNow"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:layout_alignTop="@+id/textViewSmokingNow"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewSmokingStartingAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textViewSmokingNow"
+                        android:maxEms="10"
+                        android:layout_below="@+id/switchSmokingNow"
+                        android:layout_marginTop="6dip"
+                        android:text="if YES: How old were you when you began smoking"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/edittextSmokingStartingAge"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textViewSmokingStartingAge"
+                        android:layout_alignLeft="@+id/switchSmokingNow"
+                        android:layout_alignRight="@+id/switchSmokingNow"
+                        android:ems="10"
+                        android:inputType="text" />
+
+
+                    <TextView
+                        android:id="@+id/textViewSmokingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textViewSmokingNow"
+                        android:maxEms="12"
+                        android:layout_below="@+id/edittextSmokingStartingAge"
+                        android:layout_marginTop="6dip"
+                        android:text="if YES: How many cigarettes/biri do you smoke each day?"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/edittextSmokingCount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBottom="@+id/textViewSmokingCount"
+                        android:layout_alignLeft="@+id/switchSmokingNow"
+                        android:layout_alignRight="@+id/switchSmokingNow"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/textViewSmokingRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignLeft="@+id/textViewSmokingCount"
+                        android:maxEms="14"
+                        android:layout_below="@+id/textViewSmokingCount"
+                        android:layout_marginTop="6dip"
+                        android:text="if NO:  Did you ever smoke regularly?"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <Switch
+                        android:id="@+id/switchSmokingRegular"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textViewSmokingRegular"
+                        android:layout_alignLeft="@+id/switchSmokingNow"
+                        android:layout_alignRight="@+id/switchSmokingNow"
+                        android:text=""
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <!--smoking end -->
+                </RelativeLayout>
+
+                <TextView
+                    android:visibility="gone"
+                    android:id="@+id/textViewSmoking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14.0dip"
+                    android:text="1. Smoking:"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <Switch
+                    android:visibility="gone"
+                    android:id="@+id/switchSmoking"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewSmoking"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewBetelNut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/smokingLayout"
+                    android:layout_marginTop="6dip"
+                    android:text="14. Betel nut chewing:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchBetelNut"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewBetelNut"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes"/>
+
+                <TextView
+                    android:id="@+id/textViewCancerfamilyHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBetelNut"
+                    android:layout_marginTop="6.0dip"
+                    android:maxEms="12"
+                    android:maxLines="3"
+                    android:text="15. Family history of lung or cancer in the mouth and throat in father,mother or brothers?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchCancerfamilyHistory"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewCancerfamilyHistory"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewCancerfamilyHistory"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewMalaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewCancerfamilyHistory"
+                    android:layout_marginTop="6dip"
+                    android:maxEms="10"
+                    android:maxLines="2"
+                    android:text="16. Malaria clinically in last year:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchMalaria"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewMalaria"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewMalaria"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewMalariaTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewMalaria"
+                    android:layout_marginTop="6dip"
+                    android:text="If yes, Treated in Hospital?"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:typeface="serif" />
+
+                <Switch
+                    android:id="@+id/switchMalariaTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewMalariaTreatment"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewProductiveCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewMalariaTreatment"
+                    android:layout_marginTop="6dip"
+                    android:maxEms="12"
+                    android:maxLines="2"
+                    android:text="17. Productive cough with fever episode in last 6 months?:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchProductiveCough"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewProductiveCough"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewProductiveCough"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewProductiveCoughTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewProductiveCough"
+                    android:layout_marginTop="6dip"
+                    android:maxEms="10"
+                    android:maxLines="2"
+                    android:text="If yes, Seen by/ treated by physician?"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Switch
+                    android:id="@+id/switchProductiveCoughTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/textViewProductiveCoughTreatment"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewProductiveCoughTreatment"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewOtherMedicine"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewProductiveCoughTreatment"
+                    android:text="18. Regular medicines:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/editextOtherMedicine"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewOtherMedicine"
+                    android:ems="10"/>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

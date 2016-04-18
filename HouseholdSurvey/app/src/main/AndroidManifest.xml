@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.amadergram.rampal.survey"
+    android:versionCode="8"
+    android:versionName="2.1" >
+
+    <uses-sdk
+        android:minSdkVersion="14"
+        android:targetSdkVersion="19" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme">
+        
+        <activity
+            android:name="com.osmani.rampal.upazillasurvey.Login"
+            android:label="@string/app_name"
+            android:screenOrientation="portrait" >
+            
+           <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name="com.osmani.rampal.household.HHFirstPage"
+            android:label="@string/hh_title_activity_first_page"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.household.HHSecondPage"
+            android:label="@string/hh_title_activity_second_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.household.HHThirdPage"
+            android:label="@string/hh_title_activity_third_page"
+            android:screenOrientation="portrait" >
+
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.household.HHFourthPage"
+            android:label="@string/hh_title_activity_fourth_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.household.HHFifthPage"
+            android:label="@string/hh_title_activity_fifth_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.household.HHRootMenuActivity"
+            android:label="@string/hh_title_activity_root_menu"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <!-- Personal -->
+        <activity
+            android:name="com.osmani.rampal.personal.PPFirstPage"
+            android:label="@string/pp_title_activity_first_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.PPSecondPage"
+            android:label="@string/pp_title_activity_second_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.PPThirdPage"
+            android:label="@string/pp_title_activity_third_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.PPFourthPage"
+            android:label="@string/pp_title_activity_fourth_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.PPFifthPage"
+            android:label="@string/pp_title_activity_fifth_page"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.MalePageOne"
+            android:label="@string/pp_title_activity_male_page_one"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.MalePageTwo"
+            android:label="@string/pp_title_activity_male_page_two"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.MalePageThree"
+            android:label="@string/pp_title_activity_male_page_three"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.FemalePageOne"
+            android:label="@string/pp_title_activity_female_page_one"
+            android:screenOrientation="portrait" >
+        </activity>
+
+        <activity
+            android:name="com.osmani.rampal.personal.FemalePagetwo"
+            android:label="@string/pp_title_activity_female_pagetwo"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.FemalePageThree"
+            android:label="@string/pp_title_activity_female_page_three"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.personal.FemalePageFour"
+            android:label="@string/pp_title_activity_female_page_four"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.upazillasurvey.PPRootMenuActivity"
+            android:label="@string/title_activity_pproot_menu"
+            android:screenOrientation="portrait" >
+        </activity>
+        <activity
+            android:name="com.osmani.rampal.upazillasurvey.SelectVillage"
+            android:screenOrientation="portrait"
+            android:label="@string/title_activity_select_village" >
+        </activity>
+        
+        <service android:name="com.osmani.location.LocationTrackerService"
+            android:enabled="true"
+            android:exported="false">
+            
+        </service>
+    </application>
+
+</manifest>

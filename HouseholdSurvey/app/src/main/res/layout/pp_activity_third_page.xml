@@ -1,0 +1,218 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textSize="14.0sp"
+                android:typeface="serif" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginLeft="15.0dip"
+                    android:text="14. Any kind of visible health problems?"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <Switch
+                    android:id="@+id/symptomSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:layout_below="@+id/textView1"
+                    android:layout_marginTop="14.0dip"
+                    android:onClick="onSwitchClicked"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/symptomSwitch"
+                    android:layout_alignBottom="@+id/symptomSwitch"
+                    android:layout_centerHorizontal="true"
+                    android:text="if yes:"
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/symptomSwitch"
+                    android:layout_alignRight="@+id/symptomET"
+                    android:layout_below="@+id/symptomSwitch"
+                    android:layout_marginTop="16.0dip"
+                    android:text="15. Any kind of lump in your body?"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <Switch
+                    android:id="@+id/lumpSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_below="@+id/textView3"
+                    android:onClick="onSwitchClicked"
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/lumpSwitch"
+                    android:layout_alignRight="@+id/textView3"
+                    android:layout_below="@+id/lumpSwitch"
+                    android:layout_marginTop="9.0dip"
+                    android:text="16. Cause of illness:\n(name of some disease)"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/illnessET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_alignRight="@+id/textView4"
+                    android:layout_below="@+id/textView4"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/illnessET"
+                    android:layout_below="@+id/illnessET"
+                    android:layout_marginTop="12.0dip"
+                    android:text="17. Checked up by the doctor in last three months?"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <Switch
+                    android:id="@+id/doctorSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView5"
+                    android:layout_below="@+id/textView5"
+                    android:onClick="onSwitchClicked"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/doctorSwitch"
+                    android:layout_alignBottom="@+id/doctorSwitch"
+                    android:layout_centerHorizontal="true"
+                    android:text="if yes:"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/diseaseNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:ems="10"
+                    android:hint="disease name"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/symptomET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView2"
+                    android:layout_alignBottom="@+id/textView2"
+                    android:layout_alignRight="@+id/textView1"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/doctorSwitch"
+                    android:layout_alignRight="@+id/diseaseNameET"
+                    android:layout_below="@+id/diseaseNameET"
+                    android:layout_marginTop="11.0dip"
+                    android:text="18. Name of the medicine:\n(from prescription)"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/medicineET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignRight="@+id/textView7"
+                    android:layout_below="@+id/textView7"
+                    android:ems="10" />
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout>

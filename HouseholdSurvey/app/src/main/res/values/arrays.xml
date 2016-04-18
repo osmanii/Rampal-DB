@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="villages">
+        <item>Select</item>
+        <item>Adaghat</item>
+        <item>Alukdia</item>
+        <item>Barni</item>
+        <item>Bhairabdanga</item>
+        <item>Chitra</item>
+        <item>Gaurambha</item>
+        <item>Kaigar Daskati</item>
+        <item>Kanyadubi</item>
+        <item>Kapasdanga</item>
+        <item>Muralia</item>
+        <item>Pasadnagar</item>
+        <item>Sankardanga</item>
+        <item>Sonakur</item>
+        <item>Sreerambha</item>
+        <item>Uttar Gaurambha</item>
+    </string-array>
+    <string-array name="lastEducation">
+        <item>Select</item>
+        <item>Illiterate</item>
+        <item>Primary</item>
+        <item>Secondary</item>
+        <item>Intermediate</item>
+        <item>Graduate</item>
+        <item>Post Graduate</item>
+    </string-array>
+    <string-array name="incomeSource">
+        <item>Select</item>
+        <item>Nil</item>
+        <item>Agriculture</item>
+        <item>Non Agriculture</item>
+        <item>Fishing</item>
+        <item>Day Labor</item>
+        <item>Business</item>
+        <item>Service</item>
+        <item>Student</item>
+    </string-array>
+    <string-array name="house">
+        <item>Select</item>
+        <item>Nil</item>
+        <item>Rent</item>
+        <item>Shelter</item>
+        <item>Pucca</item>
+        <item>Semi-Pucca</item>
+        <item>Kacha</item>
+        <item>Jhupri</item>
+    </string-array>
+    <string-array name="drinkingWaterSource">
+        <item>Select</item>
+        <item>Piped into dwelling</item>
+        <item>Piped to yard/plot</item>
+        <item>Public tap/Standpipe</item>
+        <item>Ponds</item>
+        <item>Tubewell/ Borhole</item>
+        <item>Supply</item>
+        <item>Rainwater</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="toiletFacility">
+        <item>Select</item>
+        <item>Ventilated Improved Pit (VIP)</item>
+        <item>Pit Latrine with Slab</item>
+        <item>Latrine</item>
+        <item>Pit Latrine without Slab/Open Pit</item>
+        <item>Hanging Toilet/Hanging Latrine</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="saferWaterSources">
+        <item>Select</item>
+        <item>Boil</item>
+        <item>Filter</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="religionNames">
+        <item>Select</item>
+        <item>Islam</item>
+        <item>Hindu</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="avgSpendRange">
+        <item>Select</item>
+        <item>&lt;3,000 Tk</item>
+        <item>3001-6000 Tk</item>
+        <item>6001-9000 Tk</item>
+        <item>9001-12,000 Tk</item>
+        <item>>12,001 Tk</item>
+    </string-array>
+    <string-array name="landOwnershipRange">
+        <item>Select</item>
+        <item>No land</item>
+        <item>&lt;50 deci</item>
+        <item>50deci - 1acre</item>
+        <item>1-5 acre</item>
+        <item>5+ acre</item>
+    </string-array>
+    <string-array name="sourcesKitchenFuel">
+        <item>Select</item>
+        <item>Wood</item>
+        <item>Agriculture Crop</item>
+        <item>Animal Dung</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="importantConcerns">
+        <item>Select</item>
+        <item>The Level of Income</item>
+        <item>Having Adequate Food</item>
+        <item>Health Problems of Household Members</item>
+        <item>Other</item>
+    </string-array>
+    <string-array name="profession">
+        <item>Select</item>
+        <item>Agriculture</item>
+        <item>Farming</item>
+        <item>Day-labor</item>
+        <item>Service</item>
+        <item>Business</item>
+        <item>Student</item>
+        <item>Fishing</item>
+    </string-array>
+    <string-array name="maritalStatus">
+        <item>Select</item>
+        <item>Married</item>
+        <item>Single</item>
+        <item>Divorced</item>
+        <item>Separated</item>
+        <item>Widowed</item>
+    </string-array>
+    <string-array name="healthCondition">
+        <item>Select</item>
+        <item>Sound</item>
+        <item>Not good</item>
+    </string-array>
+    <string-array name="treatment">
+        <item>Select</item>
+        <item>Quack doctor</item>
+        <item>Homeopathic</item>
+        <item>Auirbedh</item>
+        <item>MBBS</item>
+        <item>Health Complex</item>
+        <item>Hospital</item>
+        <item>Sadar Hospital</item>
+        <item>Community Clinic</item>
+        <item>Union Health Center</item>
+        <item>Health Worker</item>
+    </string-array>
+    <string-array name="bloodGroups">
+        <item>Select</item>
+        <item>A+</item>
+        <item>A-</item>
+        <item>B+</item>
+        <item>B-</item>
+        <item>O+</item>
+        <item>O-</item>
+        <item>AB+</item>
+        <item>AB-</item>
+    </string-array>
+</resources>
