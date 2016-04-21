@@ -251,28 +251,28 @@ public class HHThirdPage extends Activity implements OnClickListener, OnItemSele
 
 		try {
 			if (FieldValidationUtils.validateEdittextValueForNumber(total))
-				totalMembers = Integer.parseInt(total.getText().toString());
+				totalMembers = Integer.parseInt(total.getText().toString().trim());
 
 			if (FieldValidationUtils.validateEdittextValueForNumber(male))
-				maleMembers = Integer.parseInt(male.getText().toString());
+				maleMembers = Integer.parseInt(male.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(female))
-				femaleMembers = Integer.parseInt(female.getText().toString());
+				femaleMembers = Integer.parseInt(female.getText().toString().trim());
 			
 			if(totalMembers != (maleMembers + femaleMembers))
 				wrongTotal = true;
 			
 			if (FieldValidationUtils.validateEdittextValueForNumber(years0to5))
-				y0to5Members = Integer.parseInt(years0to5.getText().toString());
+				y0to5Members = Integer.parseInt(years0to5.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(years5to11))
-				y5to11Members = Integer.parseInt(years5to11.getText().toString());
+				y5to11Members = Integer.parseInt(years5to11.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(years11to19))
-				y11to19Members = Integer.parseInt(years11to19.getText().toString());
+				y11to19Members = Integer.parseInt(years11to19.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(years19to49))
-				y19to49Members = Integer.parseInt(years19to49.getText().toString());
+				y19to49Members = Integer.parseInt(years19to49.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(years49to60))
-				y49to60Members = Integer.parseInt(years49to60.getText().toString());
+				y49to60Members = Integer.parseInt(years49to60.getText().toString().trim());
 			if (FieldValidationUtils.validateEdittextValueForNumber(years60Plus))
-				y60PlusMembers = Integer.parseInt(years60Plus.getText().toString());
+				y60PlusMembers = Integer.parseInt(years60Plus.getText().toString().trim());
 
 			if (totalMembers != (y0to5Members + y5to11Members + y11to19Members + y19to49Members
 					+ y49to60Members + y60PlusMembers)) 

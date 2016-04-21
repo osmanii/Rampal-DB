@@ -112,6 +112,7 @@
     </string-array>
     <string-array name="profession">
         <item>Select</item>
+        <item>Nil</item>
         <item>Agriculture</item>
         <item>Farming</item>
         <item>Day-labor</item>

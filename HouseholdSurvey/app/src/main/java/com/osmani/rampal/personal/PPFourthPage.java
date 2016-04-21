@@ -11,6 +11,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -263,8 +264,8 @@ public class PPFourthPage extends Activity implements OnClickListener, OnItemSel
 		spEditor = sharedPreferences.edit();
 	    
 		spEditor.putString("anyCurrentMedicine",  currentMedicine_str);
-		spEditor.putString("currentMedicine",  currentMedicine.getText().toString());
-		spEditor.putString("prescribedBy",  prescribedBy.getText().toString());
+		spEditor.putString("currentMedicine", ViewUtils.getEditTextInput(currentMedicine));
+		spEditor.putString("prescribedBy",  ViewUtils.getEditTextInput(prescribedBy));
 		spEditor.putString("treatment",  treatment_str);
 		spEditor.putString("immunization",  immunization_str);
 		spEditor.putString("medicalCheckUp",  medicalCheckUp_str);

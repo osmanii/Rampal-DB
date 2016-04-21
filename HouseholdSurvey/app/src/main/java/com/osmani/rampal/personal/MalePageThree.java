@@ -11,6 +11,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -284,9 +285,9 @@ public class MalePageThree extends Activity implements OnClickListener{
 		spEditor = sharedPreferences.edit();
 	    
 		spEditor.putString("smokingNow",getSwitchValue(switchSmokingNow) );
-        spEditor.putString("smokingStartingAge",  edittextSmokingStartingAge.getText().toString());
-        spEditor.putString("smokingCount",  edittextSmokingCount.getText().toString());
-        spEditor.putString("isEverSmoking",getSwitchValue(switchSmokingRegular) );
+        spEditor.putString("smokingStartingAge", ViewUtils.getEditTextInput(edittextSmokingStartingAge));
+        spEditor.putString("smokingCount",  ViewUtils.getEditTextInput(edittextSmokingCount));
+        spEditor.putString("isEverSmoking",getSwitchValue(switchSmokingRegular));
 
 		spEditor.putString("betelNutChewing",  getSwitchValue(switchBetelNut));
 		spEditor.putString("familyHistoryCancer", getSwitchValue(switchCancerfamilyHistory));
@@ -294,7 +295,7 @@ public class MalePageThree extends Activity implements OnClickListener{
 		spEditor.putString("treatedLastYearClinicalMalaria", getSwitchValue(switchMalariaTreatment) );
 		spEditor.putString("isProductiveCough",  getSwitchValue(switchProductiveCough));
 		spEditor.putString("treatedProductiveCough",  getSwitchValue(switchProductiveCoughTreatment));
-		spEditor.putString("regularMedicines",  editextOtherMedicine.getText().toString());
+		spEditor.putString("regularMedicines",  ViewUtils.getEditTextInput(editextOtherMedicine));
 		
 		spEditor.putString("personDraftStatus", "finished");
 		spEditor.putString("personDraftWhere",  "");		

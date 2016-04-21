@@ -11,6 +11,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 
 import android.app.Activity;
@@ -270,16 +271,16 @@ public class FemalePageFour extends Activity implements OnClickListener{
 		sharedPreferences =  getSharedPreferences("personalInformation", 0);
 		spEditor = sharedPreferences.edit();
 	    
-		spEditor.putString("ageMenarcheYears",edittextAgeMenarcheYear.getText().toString() );
-		spEditor.putString("ageMenarcheMonths",  edittextAgeMenarcheMonth.getText().toString() );
+		spEditor.putString("ageMenarcheYears", ViewUtils.getEditTextInput(edittextAgeMenarcheYear));
+		spEditor.putString("ageMenarcheMonths",  ViewUtils.getEditTextInput(edittextAgeMenarcheMonth));
 		spEditor.putString("isMennopauseApplicable", getSwitchValue(switchAgeMenopause));
-		spEditor.putString("ageMennopauseYears",  edittextAgeMenopauseYears.getText().toString() );
+		spEditor.putString("ageMennopauseYears",  ViewUtils.getEditTextInput(edittextAgeMenopauseYears));
 		spEditor.putString("isFirstPregnencyApplicable", getSwitchValue(switchAgeFirstPregnency) );
-		spEditor.putString("ageFirstPregnencyYears", edittextAgeFirstPregnencyYear.getText().toString() );
-		spEditor.putString("ageFirstPregnencyMonths", edittextAgeFirstPregnencyMonth.getText().toString() );
-		spEditor.putString("noFullTermPregnency", editextFullTermPregnency.getText().toString());
+		spEditor.putString("ageFirstPregnencyYears", ViewUtils.getEditTextInput(edittextAgeFirstPregnencyYear));
+		spEditor.putString("ageFirstPregnencyMonths", ViewUtils.getEditTextInput(edittextAgeFirstPregnencyMonth));
+		spEditor.putString("noFullTermPregnency", ViewUtils.getEditTextInput(editextFullTermPregnency));
 		
-		spEditor.putString("noMonthsBreastFeeding", editextFullBreastFeedingMonths.getText().toString());
+		spEditor.putString("noMonthsBreastFeeding", ViewUtils.getEditTextInput(editextFullBreastFeedingMonths));
 		spEditor.putString("isCurrentOralContraceptives", getSwitchValue(switchCurrentOralContraceptives));
 		spEditor.putString("isCurrentInjectableContraceptives", getSwitchValue(switchCurrentInjectableContraceptives));
 		spEditor.putString("isEverOralContraceptives", getSwitchValue(switchEverOralContraceptives));

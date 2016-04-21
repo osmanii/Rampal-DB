@@ -244,12 +244,12 @@ public class FemalePageThree extends Activity implements OnClickListener {
 		spEditor.putString("isTetanus",  getSwitchValue(switchTetanus));
 
 
-		spEditor.putString("heightFemale",  editTextHeight.getText().toString());
-		spEditor.putString("weightFemale",  editTextWeight.getText().toString());
-		spEditor.putString("systolic1",  editTextSystolic1.getText().toString());
-		spEditor.putString("diastolic1",  editTextDiastolic1.getText().toString());
-		spEditor.putString("systolic2",  editTextSystolic2.getText().toString());
-		spEditor.putString("diastolic2",  editTextDiastolic2.getText().toString());
+		spEditor.putString("heightFemale",  ViewUtils.getEditTextInput(editTextHeight));
+		spEditor.putString("weightFemale",  ViewUtils.getEditTextInput(editTextWeight));
+		spEditor.putString("systolic1",  ViewUtils.getEditTextInput(editTextSystolic1));
+		spEditor.putString("diastolic1",  ViewUtils.getEditTextInput(editTextDiastolic1));
+		spEditor.putString("systolic2",  ViewUtils.getEditTextInput(editTextSystolic2));
+		spEditor.putString("diastolic2",  ViewUtils.getEditTextInput(editTextDiastolic2));
 		
 		spEditor.commit();
 	}

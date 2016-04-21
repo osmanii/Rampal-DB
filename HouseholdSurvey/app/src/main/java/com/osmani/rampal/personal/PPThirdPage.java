@@ -9,6 +9,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -226,12 +227,12 @@ public class PPThirdPage extends Activity implements OnClickListener{
 		spEditor = sharedPreferences.edit();
 	    
 		spEditor.putString("isSymptom",  symptom_str);
-		spEditor.putString("symptom",  symptomET.getText().toString());
+		spEditor.putString("symptom", ViewUtils.getEditTextInput(symptomET));
 		spEditor.putString("lump",  lump_str);
-		spEditor.putString("illness",  illnessET.getText().toString());
+		spEditor.putString("illness", ViewUtils.getEditTextInput(illnessET));
 		spEditor.putString("doctorCheckUp", doctor_str);
-		spEditor.putString("diseaseDoctorCheckUp",  diseaseET.getText().toString());
-		spEditor.putString("medicine", medicineET.getText().toString());
+		spEditor.putString("diseaseDoctorCheckUp", ViewUtils.getEditTextInput(diseaseET));
+		spEditor.putString("medicine", ViewUtils.getEditTextInput(medicineET));
 		
 		spEditor.commit();	
 	}

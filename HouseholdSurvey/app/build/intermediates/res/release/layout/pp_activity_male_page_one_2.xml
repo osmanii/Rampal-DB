@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textViewHeartDisease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dip"
+                    android:text="8. Heart disease?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchHeartDisease"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewHeartDisease"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewMajorDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewHeartDisease"
+                    android:layout_marginTop="8dip"
+                    android:text="9. Have major disability?"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <Switch
+                    android:id="@+id/switchMajorDisability"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewMajorDisability"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/disabilityLayout"
+                    android:layout_below="@+id/textViewMajorDisability"
+                    android:layout_marginTop="4dp">
+                    <TextView
+                        android:id="@+id/textView21"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="if yes,"
+                        android:layout_centerVertical="true"
+                        android:layout_marginRight="4dp"/>
+                    <EditText
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/typeOfDisabilityET"
+                        android:layout_toRightOf="@id/textView21"
+                        android:layout_alignParentRight="true"/>
+
+                </RelativeLayout>
+
+
+                <TextView
+                    android:id="@+id/textView10"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/disabilityLayout"
+                    android:layout_marginTop="5dip"
+                    android:maxEms="10"
+                    android:maxLines="2"
+                    android:text="10. Immunization status:"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <!--immunization start-->
+                <TextView
+                    android:id="@+id/textViewHepA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView10"
+                    android:maxEms="10"
+                    android:text="    Hepatitis A (ever)"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Switch
+                    android:id="@+id/switchHepA"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewHepA"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewHepB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewHepA"
+                    android:layout_marginTop="10dip"
+                    android:text="    Hepatitis B (ever)"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Switch
+                    android:id="@+id/switchHepB"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewHepB"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewHPV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewHepB"
+                    android:layout_marginTop="10dip"
+                    android:text="    HPV (ever)"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Switch
+                    android:id="@+id/switchHPV"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewHPV"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+                <TextView
+                    android:id="@+id/textViewTetanus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewHPV"
+                    android:layout_marginTop="10dip"
+                    android:text="    Tetanus (ever)"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <Switch
+                    android:id="@+id/switchTetanus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignTop="@+id/textViewTetanus"
+                    android:text=""
+                    android:textOff="No"
+                    android:textOn="Yes" />
+
+
+                <!--immunization end-->
+                <!--physical examination start-->
+
+                <TextView
+                    android:id="@+id/textViewPhysicalExam"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewTetanus"
+                    android:layout_marginTop="5dip"
+                    android:text="11. Physical Examination"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textViewPhysicalExam"
+                    android:layout_below="@+id/textViewPhysicalExam"
+                    android:layout_marginTop="18.0dip"
+                    android:text="Height(cm):"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/editTextHeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignBottom="@+id/textView6"
+                    android:layout_toRightOf="@+id/textView6"
+                    android:ems="4"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editTextHeight"
+                    android:layout_alignBottom="@+id/editTextHeight"
+                    android:layout_toRightOf="@+id/editTextHeight"
+                    android:text="Weight(kg):"
+                    android:textAppearance="?android:textAppearanceSmall" />
+
+                <EditText
+                    android:id="@+id/editTextWeight"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/editTextHeight"
+                    android:layout_alignBottom="@+id/editTextHeight"
+                    android:layout_toRightOf="@+id/textView7"
+                    android:layout_alignParentRight="true"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <!--physical examination end-->
+
+                <!--blood pressure start-->
+
+                <TextView
+                    android:id="@+id/textViewBloodPressure"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/editTextWeight"
+                    android:layout_marginTop="14.0dip"
+                    android:text="12. Blood Pressure: Right Arm-Resting, Sitting-Legs Uncrossed X2"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textViewBloodPressure"
+                    android:layout_marginTop="18.0dip"
+                    android:id="@+id/layout_pressure_1">
+
+                    <TextView
+                        android:id="@+id/textView61"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="1. Systolic:"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/editTextSystolic1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_alignBaseline="@+id/textView61"
+                        android:layout_toRightOf="@+id/textView61"
+                        android:ems="4"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/textView71"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/editTextSystolic1"
+                        android:layout_alignBottom="@+id/editTextSystolic1"
+                        android:layout_toRightOf="@+id/editTextSystolic1"
+                        android:text="1. Diastolic:"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/editTextDiastolic1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/editTextSystolic1"
+                        android:layout_alignBottom="@+id/editTextSystolic1"
+                        android:layout_toRightOf="@+id/textView71"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/layout_pressure_1"
+                    android:layout_marginTop="6dip"
+                    android:id="@+id/layout_pressure_2">
+
+                    <TextView
+                        android:id="@+id/textView62"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:text="2. Systolic:"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/editTextSystolic2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView62"
+                        android:layout_toRightOf="@+id/textView62"
+                        android:ems="4"
+                        android:inputType="number" />
+
+                    <TextView
+                        android:id="@+id/textView72"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/editTextSystolic2"
+                        android:layout_toRightOf="@+id/editTextSystolic2"
+                        android:text="2. Diastolic:"
+                        android:textAppearance="?android:textAppearanceSmall" />
+
+                    <EditText
+                        android:id="@+id/editTextDiastolic2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/editTextSystolic2"
+                        android:layout_alignBottom="@+id/editTextSystolic2"
+                        android:layout_toRightOf="@+id/textView72"
+                        android:layout_alignParentRight="true"
+                        android:ems="10"
+                        android:inputType="number" />
+
+                </RelativeLayout>
+                <!--physical examination end-->
+
+
+
+
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/E:/AndroProjectRepo/StudioDirectory/HouseholdSurvey/app/src/main/res/layout/pp_activity_male_page_one_2.xml -->

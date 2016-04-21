@@ -13,4 +13,11 @@ public class ViewUtils {
 		
 		return spinnerView.getSelectedItem().toString().trim();
 	}
+	public static String getEditTextInput(EditText editText){
+
+		if(editText.getText().toString().trim().length()!=0)
+			return editText.getText().toString().trim();
+		else
+			return "";
+	}
 }

@@ -13,6 +13,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -199,13 +200,13 @@ public class PPFirstPage extends Activity implements OnClickListener{
 		spEditor = sharedPreferences.edit();
 	    
 		spEditor.putString("personId",  personalId);
-		spEditor.putString("nameFamilyHead",  familyHead.getText().toString());
-		spEditor.putString("name",  name.getText().toString());
-		spEditor.putString("mothersName",  mothersName.getText().toString());
-		spEditor.putString("fathersName",  fathersName.getText().toString());
-		spEditor.putString("dob",  dob.getText().toString());
-		spEditor.putString("age",  age.getText().toString());
-		spEditor.putString("voterOrBirth",  voterBirth.getText().toString());
+		spEditor.putString("nameFamilyHead", ViewUtils.getEditTextInput(familyHead));
+		spEditor.putString("name",  ViewUtils.getEditTextInput(name));
+		spEditor.putString("mothersName",  ViewUtils.getEditTextInput(mothersName));
+		spEditor.putString("fathersName",  ViewUtils.getEditTextInput(fathersName));
+		spEditor.putString("dob",  ViewUtils.getEditTextInput(dob));
+		spEditor.putString("age",  ViewUtils.getEditTextInput(age));
+		spEditor.putString("voterOrBirth",  ViewUtils.getEditTextInput(voterBirth));
 		
 		spEditor.commit();
 	}

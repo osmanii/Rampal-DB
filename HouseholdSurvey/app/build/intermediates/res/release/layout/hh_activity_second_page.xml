@@ -1,0 +1,341 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin">
+
+        <LinearLayout
+            android:id="@+id/buttonContainer"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginTop="5.0dip"
+            android:orientation="horizontal"
+            android:weightSum="3.0">
+
+            <Button
+                android:id="@+id/backButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Back"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/draftButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Draft"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+
+            <Button
+                android:id="@+id/nextButton"
+                android:layout_width="0.0dip"
+                android:layout_height="wrap_content"
+                android:layout_weight="1.0"
+                android:text="Next"
+                android:textColor="@android:color/white"
+                android:textSize="14.0sp" />
+        </LinearLayout>
+
+        <ScrollView
+            android:id="@+id/contentExceptButton"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:layout_above="@+id/buttonContainer"
+            android:layout_alignParentTop="true">
+
+            <RelativeLayout
+                android:layout_width="fill_parent"
+                android:layout_height="0.0px"
+                android:layout_weight="1.0">
+
+                <TextView
+                    android:id="@+id/textView1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:text="8. Name of Head of the family"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/nameHeadET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView1"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@+id/textView1"
+                    android:ems="10">
+
+                    <requestFocus />
+                </EditText>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/nameHeadET"
+                    android:layout_alignRight="@+id/nameHeadET"
+                    android:layout_below="@+id/nameHeadET"
+                    android:layout_marginTop="5dp"
+                    android:text="9. Mother's Name"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <EditText
+                    android:id="@+id/mothersNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView2"
+                    android:layout_alignRight="@+id/nameHeadET"
+                    android:layout_below="@+id/textView2"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/mothersNameET"
+                    android:layout_alignRight="@+id/mothersNameET"
+                    android:layout_below="@+id/mothersNameET"
+                    android:layout_marginTop="5dp"
+                    android:text="10. Father's Name"
+                    android:textAppearance="?android:textAppearanceMedium" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView3"
+                    android:layout_below="@+id/textView3" />
+
+                <RadioGroup
+                    android:id="@+id/radioGroup2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/textView3"
+                    android:layout_marginLeft="17.0dip"
+                    android:layout_toRightOf="@+id/textView2" />
+
+                <EditText
+                    android:id="@+id/fatherNameET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/radioGroup1"
+                    android:layout_alignRight="@+id/textView3"
+                    android:layout_below="@+id/radioGroup1"
+                    android:ems="10" />
+
+                <TextView
+                    android:id="@+id/textView4"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/fatherNameET"
+                    android:layout_below="@+id/fatherNameET"
+                    android:layout_marginTop="5dp"
+                    android:text="11. Mobile No?     "
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <Switch
+                    android:id="@+id/mobileSwitch"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/textView4"
+                    android:layout_marginLeft="25.0dip"
+                    android:layout_toRightOf="@+id/textView4"
+                    android:gravity="center_horizontal"
+                    android:onClick="onSwitchClicked"
+                    android:textOff="No"
+                    android:textOn="Yes"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView5"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView4"
+                    android:layout_below="@+id/mobileSwitch"
+                    android:layout_marginTop="11.0dip"
+                    android:layout_toLeftOf="@+id/mobileSwitch"
+                    android:gravity="center_horizontal"
+                    android:text="If Yes: "
+                    android:textAppearance="?android:textAppearanceSmall"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/mobileNoET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView5"
+                    android:layout_alignBottom="@+id/textView5"
+                    android:layout_alignLeft="@+id/mobileSwitch"
+                    android:layout_alignRight="@+id/fatherNameET"
+                    android:ems="10"
+                    android:hint="number"
+                    android:inputType="phone"
+                    android:typeface="serif" />
+
+                <TextView
+                    android:id="@+id/textView6"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textView5"
+                    android:layout_below="@+id/mobileNoET"
+                    android:layout_marginTop="8dp"
+                    android:text="12. a) Date of birth"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/dateOfBirthET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/textView6"
+                    android:layout_alignLeft="@+id/mobileSwitch"
+                    android:ems="10"
+                    android:inputType="date"
+                    android:typeface="serif" />
+
+                <EditText
+                    android:id="@+id/ageET"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/dateOfBirthET"
+                    android:layout_below="@+id/textView6"
+                    android:layout_toLeftOf="@+id/radioGroup2"
+                    android:ems="10"
+                    android:inputType="number" />
+
+                <TextView
+                    android:id="@+id/textView7"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBottom="@+id/ageET"
+                    android:layout_alignLeft="@+id/textView6"
+                    android:layout_alignRight="@+id/textView4"
+                    android:text="b) Age"
+                    android:gravity="right"
+                    android:textAppearance="?android:textAppearanceMedium"/>
+
+                <TextView
+                    android:id="@+id/textViewSafewWaterAction"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="13. Do you do anything to make the water safer?"
+                    android:textAppearance="?android:textAppearanceMedium"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@+id/textView7"
+                    android:layout_alignLeft="@+id/textView7"
+                    android:layout_alignRight="@+id/ageET"/>
+
+                <RelativeLayout
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_alignLeft="@+id/textViewSafewWaterAction"
+                    android:layout_below="@+id/textViewSafewWaterAction">
+
+                    <TextView
+                        android:id="@+id/textViewSafewWaterActionBoil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="      Boil:"
+                        android:textAppearance="?android:textAppearanceMedium" />
+
+                    <Switch
+                        android:id="@+id/switchSafewWaterActionBoil"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textViewSafewWaterActionBoil"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/textViewSafewWaterActionBoil"
+                        android:gravity="right"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+
+                    <TextView
+                        android:id="@+id/textViewSafewWaterActionFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="      Filter:"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_below="@+id/textViewSafewWaterActionBoil"
+                        android:layout_marginTop="3dp"/>
+
+                    <Switch
+                        android:id="@+id/switchSafewWaterActionFilter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textViewSafewWaterActionFilter"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/textViewSafewWaterActionFilter"
+                        android:gravity="right"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                    <TextView
+                        android:id="@+id/textViewSafewWaterActionOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="      Other:"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_below="@+id/textViewSafewWaterActionFilter"
+                        android:layout_marginTop="3dp"/>
+
+                    <Switch
+                        android:id="@+id/switchSafewWaterActionOther"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textViewSafewWaterActionOther"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/textViewSafewWaterActionOther"
+                        android:gravity="right"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                    <TextView
+                        android:id="@+id/textViewSafewWaterActionNothing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:maxEms="10"
+                        android:maxLines="2"
+                        android:text="      Nothing else:"
+                        android:textAppearance="?android:textAppearanceMedium"
+                        android:layout_below="@+id/textViewSafewWaterActionOther"
+                        android:layout_marginTop="3dp"/>
+
+                    <Switch
+                        android:id="@+id/switchSafewWaterActionNothing"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textViewSafewWaterActionNothing"
+                        android:layout_alignParentRight="true"
+                        android:layout_toRightOf="@+id/textViewSafewWaterActionNothing"
+                        android:gravity="right"
+                        android:textOff="No"
+                        android:textOn="Yes" />
+                </RelativeLayout>
+            </RelativeLayout>
+        </ScrollView>
+    </RelativeLayout>
+</LinearLayout><!-- From: file:/E:/AndroProjectRepo/StudioDirectory/HouseholdSurvey/app/src/main/res/layout/hh_activity_second_page.xml -->

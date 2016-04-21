@@ -10,6 +10,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -230,15 +231,15 @@ public class FemalePageOne extends Activity implements OnClickListener {
 		spEditor.putString("diabetes",  getSwitchValue(switchDiabetes));
 		spEditor.putString("chestPainOnExertion", getSwitchValue(switchIHD));
 		spEditor.putString("isCancer",  getSwitchValue(switchCancer));
-		spEditor.putString("cancerType",  edittextCancerType.getText().toString());
+		spEditor.putString("cancerType", ViewUtils.getEditTextInput(edittextCancerType));
 		spEditor.putString("asthma",  getSwitchValue(switchAsthma));
 		spEditor.putString("isActiveMajorCondition",  getSwitchValue(switchOtherMajor));
-		spEditor.putString("activeMajorConditionName",  edittextOtherMajorEt.getText().toString());
+		spEditor.putString("activeMajorConditionName",  ViewUtils.getEditTextInput(edittextOtherMajorEt));
 		spEditor.putString("isChronicPain",  getSwitchValue(switchChronicPain));
 		
-		spEditor.putString("chronicPainMajorSite",  edittextChronicPainMajorSite.getText().toString());
-		spEditor.putString("chronicPainCurrentLevel",  edittextChronicPainCurrentPainLevel.getText().toString());
-		spEditor.putString("chronicPainWorstLevel",  edittextChronicPainWorstPainLevel.getText().toString());
+		spEditor.putString("chronicPainMajorSite",  ViewUtils.getEditTextInput(edittextChronicPainMajorSite));
+		spEditor.putString("chronicPainCurrentLevel",  ViewUtils.getEditTextInput(edittextChronicPainCurrentPainLevel));
+		spEditor.putString("chronicPainWorstLevel",  ViewUtils.getEditTextInput(edittextChronicPainWorstPainLevel));
 		
 		
 		spEditor.commit();

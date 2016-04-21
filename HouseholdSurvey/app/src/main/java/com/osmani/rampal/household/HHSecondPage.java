@@ -228,13 +228,13 @@ public class HHSecondPage extends Activity implements OnClickListener{
 		sharedPreferences =  getSharedPreferences("householdInformation", 0);
 		spEditor = sharedPreferences.edit();
 	    
-		spEditor.putString("nameFamilyHead",  nameHead.getText().toString());
-		spEditor.putString("mothersName",  mothersName.getText().toString());
-		spEditor.putString("fathersName",  fathersName.getText().toString());
+		spEditor.putString("nameFamilyHead", ViewUtils.getEditTextInput(nameHead));
+		spEditor.putString("mothersName",  ViewUtils.getEditTextInput(mothersName));
+		spEditor.putString("fathersName",  ViewUtils.getEditTextInput(fathersName));
 		spEditor.putString("mobile",  isMobile);
-		spEditor.putString("mobileNo",  mobileNo.getText().toString());
-		spEditor.putString("dob",  dob.getText().toString());
-		spEditor.putString("age",  age.getText().toString());
+		spEditor.putString("mobileNo",  ViewUtils.getEditTextInput(mobileNo));
+		spEditor.putString("dob",  ViewUtils.getEditTextInput(dob));
+		spEditor.putString("age",  ViewUtils.getEditTextInput(age));
 
 
 		spEditor.putString("waterBoil",  ViewUtils.getSwitchValue(switchSafewWaterActionBoil));

@@ -9,6 +9,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -224,9 +225,9 @@ public class PPSecondPage extends Activity implements OnClickListener, OnItemSel
 		spEditor = sharedPreferences.edit();
 	    
 		spEditor.putString("education",  education_str);
-		spEditor.putString("height",  height.getText().toString());
+		spEditor.putString("height", ViewUtils.getEditTextInput(height));
 		spEditor.putString("profession",  profession_str);
-		spEditor.putString("relationWithFamilyHead",  relation.getText().toString());				
+		spEditor.putString("relationWithFamilyHead",  ViewUtils.getEditTextInput(relation));
 		spEditor.putString("isBloodGroup",  isBloodGroup);
 		spEditor.putString("bloodGroup",  bloodGroup.getSelectedItem().toString());
 		spEditor.putString("maritalStatus",  maritalStatus_str);

@@ -274,8 +274,8 @@ public class HHFifthPage extends Activity implements OnClickListener {
 		spEditor.putString("hasMotorCycle",  ViewUtils.getSwitchValue(switchMotorcycle));
 		spEditor.putString("hasIndependentPowerSource",  ViewUtils.getSwitchValue(switchIndependentPowerSource));
 
-		spEditor.putString("maleChild",  maleChildET.getText().toString());
-		spEditor.putString("femaleChild",  femaleChildET.getText().toString());
+		spEditor.putString("maleChild",  ViewUtils.getEditTextInput(maleChildET));
+		spEditor.putString("femaleChild",  ViewUtils.getEditTextInput(femaleChildET));
 
 
 		spEditor.putString("householdDraftStatus", "completed");

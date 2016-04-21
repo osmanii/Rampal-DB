@@ -244,7 +244,7 @@ public class HHFourthPage extends Activity implements OnClickListener, OnItemSel
 		try 
 		{
 			if (FieldValidationUtils.validateEdittextValueForNumber(houses))
-				noOfHouses = Integer.parseInt(houses.getText().toString());
+				noOfHouses = Integer.parseInt(ViewUtils.getEditTextInput(houses));
 		} 
 		catch (Exception ex) {
 			ex.printStackTrace();

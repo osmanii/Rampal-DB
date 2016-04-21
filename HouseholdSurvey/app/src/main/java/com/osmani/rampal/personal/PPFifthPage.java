@@ -16,6 +16,7 @@ import com.amadergram.rampal.survey.R;
 import com.osmani.utils.Constants;
 import com.osmani.utils.FieldValidationUtils;
 import com.osmani.utils.Utils;
+import com.osmani.utils.ViewUtils;
 
 import android.app.Activity;
 import android.app.AlertDialog;
@@ -275,9 +276,9 @@ public class PPFifthPage extends Activity implements OnClickListener {
 		
 		spEditor.putString("chosenGender",  chosenGender);
 		spEditor.putString("diedAnyByDisease",  diedAny);
-		spEditor.putString("reasonForDeath",  reason_death.getText().toString());
+		spEditor.putString("reasonForDeath", ViewUtils.getEditTextInput(reason_death));
 		spEditor.putString("diedAnyByCancer",  diedAnyCancer);
-		spEditor.putString("typeOfCancer",  type_cancer.getText().toString());
+		spEditor.putString("typeOfCancer",  ViewUtils.getEditTextInput(type_cancer));
 		spEditor.commit();	
 
 	}
