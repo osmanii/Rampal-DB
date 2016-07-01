@@ -39,4 +39,4 @@
         android:layout_marginTop="159.0dip"
         android:text="Please Select Village Name"
         android:textAppearance="?android:textAppearanceMedium" />
-</RelativeLayout><!-- From: file:/E:/AndroProjectRepo/StudioDirectory/HouseholdSurvey/app/src/main/res/layout/activity_select_village.xml -->
+</RelativeLayout><!-- From: file:/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/layout/activity_select_village.xml -->

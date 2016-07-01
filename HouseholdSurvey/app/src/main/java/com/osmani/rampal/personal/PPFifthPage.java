@@ -40,14 +40,14 @@ public class PPFifthPage extends Activity implements OnClickListener {
 	SharedPreferences sharedPreferences;
 	SharedPreferences.Editor spEditor;
 
-	String diedAny = " ", diedAnyCancer = " ";
+	String diedAny = " ", diedAnyCancer = " ", parentCousin = " ";
 
 	EditText reason_death, type_cancer;
 
 
 	boolean dataUploaded = false;
 
-	private RadioButton diedAnyYes, diedAnyNo, diedAnyCancerYes, diedAnyCancerNo;
+	private RadioButton diedAnyYes, diedAnyNo, diedAnyCancerYes, diedAnyCancerNo,parentCousinYes,parentCousinNo;
 	private Button nextButton;
 	private Button backButton;
 	private Button draftButton;
@@ -74,6 +74,10 @@ public class PPFifthPage extends Activity implements OnClickListener {
 		diedAnyNo = (RadioButton)findViewById(R.id.diedNo);
 		diedAnyCancerYes = (RadioButton)findViewById(R.id.cancerYes);
 		diedAnyCancerNo = (RadioButton)findViewById(R.id.cancerNo);
+
+
+		parentCousinYes = (RadioButton)findViewById(R.id.parentCousinYes);
+		parentCousinNo = (RadioButton)findViewById(R.id.parentCousinNo);
 
 		nextButton = (Button)findViewById(R.id.nextButton);
 	    nextButton.setOnClickListener(this);
@@ -126,6 +130,19 @@ public class PPFifthPage extends Activity implements OnClickListener {
 		{
 			type_cancer.setText(sharedPreferences.getString("typeOfCancer", ""));
 		}
+		if(sharedPreferences.getString("isMotherFatherCousin", "").equals("")==false && sharedPreferences.getString("isMotherFatherCousin", "").equalsIgnoreCase("null")==false)
+		{
+			if(sharedPreferences.getString("isMotherFatherCousin", "").equalsIgnoreCase("Yes"))
+			{
+				parentCousinYes.setChecked(true);
+				parentCousin = "Yes";
+			}
+			else if(sharedPreferences.getString("isMotherFatherCousin", "").equalsIgnoreCase("No"))
+			{
+				parentCousinNo.setChecked(true);
+				parentCousin = "No";
+			}
+		}
 
 	}
 	
@@ -155,6 +172,17 @@ public class PPFifthPage extends Activity implements OnClickListener {
 	            	diedAnyCancer = "No";
 	            Log.d("<x_x>", "Died any caner: " + diedAnyCancer);
 	            break;
+			case R.id.parentCousinYes:
+				if (checked)
+					parentCousin = "Yes";
+				Log.d("<x_x>", "parent cousin: " + parentCousin);
+				break;
+			case R.id.parentCousinNo:
+				if (checked)
+					parentCousin = "No";
+				Log.d("<x_x>", "parent cousin: " + parentCousin);
+				break;
+
 	    }
 	}
 	
@@ -279,6 +307,8 @@ public class PPFifthPage extends Activity implements OnClickListener {
 		spEditor.putString("reasonForDeath", ViewUtils.getEditTextInput(reason_death));
 		spEditor.putString("diedAnyByCancer",  diedAnyCancer);
 		spEditor.putString("typeOfCancer",  ViewUtils.getEditTextInput(type_cancer));
+
+		spEditor.putString("isMotherFatherCousin", parentCousin);
 		spEditor.commit();	
 
 	}
@@ -304,7 +334,12 @@ public class PPFifthPage extends Activity implements OnClickListener {
 		{
 			Toast.makeText(this, "Please enter type of cancer!", Toast.LENGTH_SHORT).show();
 			return false;
-		}			
+		}
+		else if(parentCousin.equals(" "))
+		{
+			Toast.makeText(this, "Please select \"Are your mother and father cousins?\"!", Toast.LENGTH_SHORT).show();
+			return false;
+		}
 
 		return true;				
 		

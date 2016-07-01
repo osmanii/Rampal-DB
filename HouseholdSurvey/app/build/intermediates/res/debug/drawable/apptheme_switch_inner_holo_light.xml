@@ -5,4 +5,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/apptheme_switch_thumb_pressed_holo_light" />
     <item android:state_checked="true" android:drawable="@drawable/apptheme_switch_thumb_activated_holo_light" />
     <item android:drawable="@drawable/apptheme_switch_thumb_holo_light" />
-</selector><!-- From: file:/E:/AndroProjectRepo/StudioDirectory/HouseholdSurvey/app/src/main/res/drawable/apptheme_switch_inner_holo_light.xml -->
+</selector><!-- From: file:/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/drawable/apptheme_switch_inner_holo_light.xml -->

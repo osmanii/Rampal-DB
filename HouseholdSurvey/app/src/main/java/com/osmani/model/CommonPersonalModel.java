@@ -48,6 +48,8 @@ public class CommonPersonalModel {
 	public String typeOfCancer;
 	
 	public String chosenGender;
+
+	public String isMotherFatherCousin;
 	
 	//common
 	public String personDraftStatus;

@@ -679,7 +679,8 @@ public class Utils {
 		model.reasonForDeath = sharedPreferences.getString("reasonForDeath",  "");
 		model.diedAnyByCancer = sharedPreferences.getString("diedAnyByCancer",  "");
 		model.typeOfCancer = sharedPreferences.getString("typeOfCancer",  "");
-		
+		model.isMotherFatherCousin = sharedPreferences.getString("isMotherFatherCousin",  "");
+
 		model.personDraftStatus = sharedPreferences.getString("personDraftStatus", "");
 		model.personDraftWhere = sharedPreferences.getString("personDraftWhere", "");
 		
@@ -739,6 +740,7 @@ public class Utils {
 		model.reasonForDeath = sharedPreferences.getString("reasonForDeath",  "");
 		model.diedAnyByCancer = sharedPreferences.getString("diedAnyByCancer",  "");
 		model.typeOfCancer = sharedPreferences.getString("typeOfCancer",  "");
+		model.isMotherFatherCousin = sharedPreferences.getString("isMotherFatherCousin",  "");
 		
 		// male page one
 		model.hypertension = sharedPreferences.getString("hypertension","" );
@@ -845,6 +847,7 @@ public class Utils {
 		model.reasonForDeath = sharedPreferences.getString("reasonForDeath",  "");
 		model.diedAnyByCancer = sharedPreferences.getString("diedAnyByCancer",  "");
 		model.typeOfCancer = sharedPreferences.getString("typeOfCancer",  "");
+		model.isMotherFatherCousin = sharedPreferences.getString("isMotherFatherCousin",  "");
 		
 		// female page one
 		model.hypertension = sharedPreferences.getString("hypertension","" );
