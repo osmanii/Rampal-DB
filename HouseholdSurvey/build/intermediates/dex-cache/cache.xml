@@ -2,25 +2,25 @@
 <items version="2" >
 
     <item
-        jar="/Users/amit/.gradle/caches/modules-2/files-2.1/joda-time/joda-time/2.4/89e9725439adffbbd41c5f5c215c136082b34a7f/joda-time-2.4.jar"
-        jumboMode="false"
-        revision="22.0.1"
-        sha1="89e9725439adffbbd41c5f5c215c136082b34a7f">
-        <dex dex="/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/build/intermediates/pre-dexed/debug/joda-time-2.4-d2a56301a60a45b4598d2553ee8ed9e2e4617cb8.jar" />
-    </item>
-    <item
-        jar="/Users/amit/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.3/5fc52c41ef0239d1093a1eb7c3697036183677ce/gson-2.3.jar"
+        jar="C:\Users\amit\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.3\5fc52c41ef0239d1093a1eb7c3697036183677ce\gson-2.3.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="5fc52c41ef0239d1093a1eb7c3697036183677ce">
-        <dex dex="/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/build/intermediates/pre-dexed/debug/gson-2.3-884f21ad94ba7bf14107f51cc9cca15e44fdb721.jar" />
+        <dex dex="E:\AndroProjectRepo\osman_git\Rampal-DB\HouseholdSurvey\app\build\intermediates\pre-dexed\release\gson-2.3-b95d5f0488a4de4706a1f8208a89884521baf3e9.jar" />
     </item>
     <item
-        jar="/Users/amit/Library/Android/sdk/extras/android/m2repository/com/android/support/support-v4/19.1.0/support-v4-19.1.0.jar"
+        jar="C:\Users\amit\.gradle\caches\modules-2\files-2.1\joda-time\joda-time\2.4\89e9725439adffbbd41c5f5c215c136082b34a7f\joda-time-2.4.jar"
+        jumboMode="false"
+        revision="22.0.1"
+        sha1="89e9725439adffbbd41c5f5c215c136082b34a7f">
+        <dex dex="E:\AndroProjectRepo\osman_git\Rampal-DB\HouseholdSurvey\app\build\intermediates\pre-dexed\release\joda-time-2.4-1c88fe05f68ae04f5a6fc7b1d2ef27a9ce386a2d.jar" />
+    </item>
+    <item
+        jar="E:\Android\extras\android\m2repository\com\android\support\support-v4\19.1.0\support-v4-19.1.0.jar"
         jumboMode="false"
         revision="22.0.1"
         sha1="85f201b380937e61a9dce6ca90ccf6872abbfb67">
-        <dex dex="/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/build/intermediates/pre-dexed/debug/support-v4-19.1.0-e903d0e12c95fdaa2e1c49fc35aeef951602a519.jar" />
+        <dex dex="E:\AndroProjectRepo\osman_git\Rampal-DB\HouseholdSurvey\app\build\intermediates\pre-dexed\release\support-v4-19.1.0-7240c029ae0b9807d51a9914072335d10444656b.jar" />
     </item>
 
 </items>

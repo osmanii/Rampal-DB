@@ -7,4 +7,4 @@
     <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/apptheme_list_selector_background_transition_holo_light" />
     <item android:state_focused="true" android:drawable="@drawable/apptheme_list_focused_holo" />
     <item android:drawable="@android:color/transparent" />
-</selector><!-- From: file:/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/drawable/apptheme_item_background_holo_light.xml -->
+</selector><!-- From: file:/E:/AndroProjectRepo/osman_git/Rampal-DB/HouseholdSurvey/app/src/main/res/drawable/apptheme_item_background_holo_light.xml -->

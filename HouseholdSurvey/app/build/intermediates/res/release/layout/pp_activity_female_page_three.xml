@@ -332,16 +332,7 @@
                     android:text=""
                     android:textOff="No"
                     android:textOn="Yes" />
-                <TextView
-                    android:id="@+id/textViewEverOralContraceptivess"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/textViewCurrentInjectableContraceptives"
-                    android:maxEms="8"
-                    android:maxLines="2"
-                    android:text="26. Ever use of oral contraceptives:"
-                    android:textAppearance="?android:textAppearanceMedium" />
             </RelativeLayout>
         </ScrollView>
     </RelativeLayout>
-</LinearLayout><!-- From: file:/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/layout/pp_activity_female_page_three.xml -->
+</LinearLayout><!-- From: file:/E:/AndroProjectRepo/osman_git/Rampal-DB/HouseholdSurvey/app/src/main/res/layout/pp_activity_female_page_three.xml -->

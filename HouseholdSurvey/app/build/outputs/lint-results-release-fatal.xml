@@ -1,24 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <issues format="4" by="lint 24.4.1">
 
-    <issue
-        id="DuplicateIds"
-        severity="Fatal"
-        message="Duplicate id `@+id/textViewEverOralContraceptivess`, already defined earlier in this layout"
-        category="Correctness"
-        priority="7"
-        summary="Duplicate ids within a single layout"
-        explanation="Within a layout, id&apos;s should be unique since otherwise `findViewById()` can return an unexpected view."
-        errorLine1="                    android:id=&quot;@+id/textViewEverOralContraceptivess&quot;"
-        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
-        <location
-            file="/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/layout/pp_activity_female_page_three.xml"
-            line="336"
-            column="21"/>
-        <location
-            file="/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/layout/pp_activity_female_page_three.xml"
-            line="315"
-            column="21"/>
-    </issue>
-
 </issues>

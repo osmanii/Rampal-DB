@@ -5,4 +5,4 @@
     <item android:state_pressed="true" android:drawable="@drawable/apptheme_spinner_pressed_holo_light" />
     <item android:state_focused="true" android:state_pressed="false" android:drawable="@drawable/apptheme_spinner_focused_holo_light" />
     <item android:drawable="@drawable/apptheme_spinner_default_holo_light" />
-</selector><!-- From: file:/Users/amit/Documents/personal/rampal-git/Rampal-DB/HouseholdSurvey/app/src/main/res/drawable/apptheme_spinner_background_holo_light.xml -->
+</selector><!-- From: file:/E:/AndroProjectRepo/osman_git/Rampal-DB/HouseholdSurvey/app/src/main/res/drawable/apptheme_spinner_background_holo_light.xml -->
